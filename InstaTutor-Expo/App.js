@@ -4,11 +4,13 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import Home from './src/components/Home.js'
 import Login from './src/components/Login.js'
 
+//App Navigator handles navigation between Apps
 const AppNavigator = createStackNavigator ({
   Login: Login,
   Home: Home,
 })
 
+//Used to display and use AppNavigator
 const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
@@ -17,18 +19,3 @@ export default class App extends React.Component {
       return <AppContainer />;
     }
   }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#00DEFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  welcome: {
-  	justifyContent: 'center',
-  	alignItems: 'center',
-  	flex: 1,
-  	fontSize: 40,
-  },
-});
