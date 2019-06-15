@@ -1,20 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
-import Home from './src/components/Home.js'
-import Login from './src/components/Login.js'
 
-const AppNavigator = createStackNavigator ({
-  Login: Login,
-  Home: Home,
-})
-
-const AppContainer = createAppContainer(AppNavigator);
-
-export default class App extends React.Component {
+export default class Home extends React.Component {
 
   render() {
-      return <AppContainer />;
+
+    const username = this.props.navigation.getParam('username', 'No User Provided')
+      return (
+        <View style={styles.container}>
+        	<Text style={styles.welcome}>Welcome {username}!</Text>
+        </View>
+     );
     }
   }
 
