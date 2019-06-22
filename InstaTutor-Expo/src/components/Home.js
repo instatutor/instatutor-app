@@ -6,10 +6,11 @@ export default class Home extends React.Component {
 
   render() {
     //Acquires the data from TextInput to display the username
-    const username = this.props.navigation.getParam('username', 'No User Provided')
+    const username = this.props.navigation.getParam('username', 'No User Provided');
+    const error = this.props.navigation.getParam('errorText', '');
       return (
         <View style={styles.container}>
-        	<Text style={styles.welcome}>Welcome {username}!</Text>
+        	<Text style={styles.welcome}>{username == '' ? 'No User Provided' : username}</Text>
         </View>
      );
     }

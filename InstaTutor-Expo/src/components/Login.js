@@ -7,6 +7,7 @@ export default class Login extends React.Component {
   state = {
     username: '',
     password: '',
+    errorText: ''
   }
 
   //Changes the username based on text inside TextInputs
@@ -14,6 +15,14 @@ export default class Login extends React.Component {
     this.setState((prevState) => {
       return {username: newText};
     });
+  }
+
+  checkIfUsername = () => {
+    if (this.state.username == '') {
+      this.setState((prevState) => {
+        return {errorText: 'You didn\'t enter a username'};
+      })
+    }
   }
 
   render() {
@@ -36,7 +45,8 @@ export default class Login extends React.Component {
         	<Button
             onPress={
               () => this.props.navigation.navigate('Home', {
-                username: this.state.username
+                username: this.state.username,
+                errorText: this.state.errorText
               })
             }
             title="Log In"
@@ -66,7 +76,6 @@ const styles = StyleSheet.create({
   	overflow: 'hidden',
   	backgroundColor: '#eeeeee',
   	width: 200,
-  	height: '0',
   	padding: 10,
   	marginTop: 10,
   },
