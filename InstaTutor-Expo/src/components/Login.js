@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   	overflow: 'hidden',
   	backgroundColor: '#eeeeee',
   	width: 200,
-  	height: '5%',
+  	height: '0',
   	padding: 10,
   	marginTop: 10,
   },
