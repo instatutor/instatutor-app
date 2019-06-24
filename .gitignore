@@ -1,1 +1,5 @@
 api/sqlcredentials.py
+api/__pycache__
+api/postman-collection
+Instatutor-Expo/node_modules
+Instatutor-Expo/.expo
