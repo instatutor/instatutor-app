@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "f5dec03b-0057-4bbe-98f3-4e7760a499d9",
+		"name": "Registration and Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Khaleel\",\n\t\"lastName\": \"Talakshi\",\n\t\"email\": \"khaleel.talakshi@gmail.com\",\n\t\"password\": \"khaleel123\",\n\t\"role\": \"student\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/register",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"keegan.sanctis@gmail.com\",\n\t\"password\": \"keegan123\"\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
