@@ -10,7 +10,7 @@ export default class Home extends React.Component {
     const error = this.props.navigation.getParam('errorText', '');
       return (
         <View style={styles.container}>
-        	<Text style={styles.welcome}>{username == '' ? 'No User Provided' : username}</Text>
+        	<Text style={styles.welcome}>Registration</Text>
         </View>
      );
     }

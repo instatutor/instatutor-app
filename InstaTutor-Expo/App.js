@@ -3,10 +3,12 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import Home from './src/components/Home.js'
 import Login from './src/components/Login.js'
+import Registration from './src/components/Registration.js'
 
 //App Navigator handles navigation between Apps
 const AppNavigator = createStackNavigator ({
   Login: Login,
+  Registration: Registration,
   Home: Home,
 })
 
